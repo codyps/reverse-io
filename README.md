@@ -11,7 +11,8 @@ fn main() -> {
 	let t = reverse_io::T(f);
 
 	let v = vec![]
-	f.read_to_end(&mut v).unwrap();
+	t.seek(std::io::SeekFrom::Start(0)).unwrap();
+	t.read_to_end(&mut v).unwrap();
 
 	println!("{:?}", v);
 }
