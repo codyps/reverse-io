@@ -3,3 +3,7 @@
 name = "reverse_io"
 version = "0.0.1"
 authors = ["Cody P Schafer <dev@codyps.com>"]
+license = "MIT"
+repository = "https://github.com/jmesmon/reverse-io"
+description = "A wrapper type allowing the reversing of std::io::{Read, Write, Seek}"
+keywords = ["io", "reverse"]
