@@ -4,7 +4,7 @@ use std::{cmp, io};
 use std::io::SeekFrom;
 use std::io::{Seek,Read,Write};
 
-pub struct T<S>(S);
+pub struct T<S>(pub S);
 
 impl<S: Read + Seek> Read for T<S> {
     fn read(&mut self, buf: &mut [u8]) -> io::Result<usize> {
