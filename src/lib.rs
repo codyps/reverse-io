@@ -1,5 +1,3 @@
-#![feature(io)]
-
 use std::{cmp, io};
 use std::io::SeekFrom;
 use std::io::{Seek,Read,Write};
@@ -82,16 +80,16 @@ fn seek() {
 fn read() {
     use std::io::Cursor;
     let t = vec![4u8, 6, 2];
-    let mut r = t.clone();
+    let r : &mut[_] = &mut t.clone();
     r.reverse();
 
     let mut c = T(Cursor::new(t));
-    let mut b = [0; 3];
+    let b : &mut[_] = &mut [0; 3];
     assert_eq!(c.seek(SeekFrom::Start(0)).unwrap(), 0);
-    assert_eq!(c.read(&mut b).unwrap(), 3);
+    assert_eq!(c.read(b).unwrap(), 3);
     assert_eq!(b, r);
     assert_eq!(c.seek(SeekFrom::Current(0)).unwrap(), 3);
-    assert_eq!(c.read(&mut b).unwrap(), 0);
+    assert_eq!(c.read(b).unwrap(), 0);
     assert_eq!(b, r);
 }
 
