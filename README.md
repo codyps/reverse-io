@@ -10,7 +10,7 @@ fn main() -> {
 	let f = File::open("hi").unwrap();
 	let t = reverse_io::T(f);
 
-	let v = vec![]
+	let v = vec![];
 	t.seek(std::io::SeekFrom::Start(0)).unwrap();
 	t.read_to_end(&mut v).unwrap();
 
