@@ -1,9 +1,9 @@
 [package]
 
 name = "reverse_io"
-version = "0.0.4"
+version = "0.0.5"
 authors = ["Cody P Schafer <dev@codyps.com>"]
-license = "MIT"
+license = "MIT OR Apache-2.0"
 repository = "https://github.com/jmesmon/reverse-io"
 description = "A wrapper type allowing the reversing of std::io::{Read, Write, Seek}"
 documentation = "http://codyps.com/docs/reverse-io/x86_64-unknown-linux-gnu/stable/reverse_io/struct.T.html"
