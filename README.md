@@ -7,7 +7,7 @@
 
 A crate supplying a wrapper type that reverses std::io::{Read,Write,Seek}
 
-```
+```rust
 extern crate reverse_io;
 use std::io::{Seek, File, Read, Write};
 
