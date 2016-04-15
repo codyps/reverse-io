@@ -1,0 +1,7 @@
+[package]
+name = "readme"
+version = "0.1.0"
+authors = ["Cody P Schafer <dev@codyps.com>"]
+
+[dependencies]
+reverse_io = { path = "../" , version = "0.*" }
